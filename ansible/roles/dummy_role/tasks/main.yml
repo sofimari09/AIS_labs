@@ -9,3 +9,4 @@ handlers:
     service:
       name: systemd-hostnamed
       state: restarted
+      
