@@ -1,0 +1,11 @@
+---
+# tasks file for update
+  
+- name: Change Hostname 
+  hostname:
+    name: "Sofiia-Denysiak-lab2"
+  register: hostname_result
+
+- name: Show the result
+  debug:
+     var: hostname_result

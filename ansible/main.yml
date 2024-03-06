@@ -1,0 +1,5 @@
+- name: Update Hostname
+  hosts: server
+  become: true
+  roles:
+    - update

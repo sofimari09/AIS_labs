@@ -1,0 +1,7 @@
+all:
+  hosts:
+    server:
+      ansible_host: 10.0.2.15
+      ansible_user: sofiia-mariia
+      ansible_port: 22
+      ansible_become_pass: "sofimari09"

@@ -1,0 +1,11 @@
+- name: Set hostname to "Sofiia-Denysiak-lab2"
+  lineinfile:
+    path: /etc/hostname
+    line: "Sofiia-Denysiak-lab2"
+  notify: Reload Hostname
+
+handlers:
+  - name: Reload Hostname
+    service:
+      name: systemd-hostnamed
+      state: restarted
