@@ -1,11 +1,14 @@
 ---
-# tasks file for update
+- name: Install package to Debian
+  become: true
+  package:
+    name: "{{ package_name}}"
+    state: present
+  when: ansible_os_family == "Debian"
   
-- name: Change Hostname 
-  hostname:
-    name: "Sofiia-Denysiak-lab2"
-  register: hostname_result
-
-- name: Show the result
-  debug:
-     var: hostname_result
+- name: Install package to RedHat
+  become: true
+  yum:
+    name: "{{ package_name}}"
+    state: present
+  when: ansible_os_family == "RedHat"
