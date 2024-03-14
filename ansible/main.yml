@@ -1,4 +1,4 @@
-- name: Update Hostname
+- name: Install package
   hosts: server
   become: true
   roles:
